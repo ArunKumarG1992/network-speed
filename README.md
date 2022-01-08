@@ -1,6 +1,10 @@
 # NetworkSpeed
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.1.
+This project is to find out most suitable network station for a device at a given point (x, y).
+
+## Built with
+* Angular 13
+* Typescript 4.5
 
 ## Development server
 
