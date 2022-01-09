@@ -1,0 +1,52 @@
+<div>
+    <div class="mb-4">
+        <!-- Available stations -->
+        <div class="mb-2">
+            <u><strong>Network stations are located at points (x, y) and have reach:</strong></u>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">X Coordinate</th>
+                    <th scope="col">Y Coordinate</th>
+                    <th scope="col">Reach</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let station of stations">
+                    <td scope="row">{{ station.x }}</td>
+                    <td scope="row">{{ station.y }}</td>
+                    <td scope="row">{{ station.reach }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="mb-4">
+        <!-- Device details -->
+        <div class="mb-2">
+            <u><strong>Device location:</strong></u>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">X Coordinate</th>
+                    <th scope="col">Y Coordinate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row"><input type="text" class="form-control" [(ngModel)]="device.x" /></td>
+                    <td scope="row"><input type="text" class="form-control" [(ngModel)]="device.y" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button type="button" class="btn btn-primary mb-3" (click)="findBestNetworkStartion()">Find</button>
+    <!-- Output best station with the best speed calculated -->
+    <div *ngIf="beastStationMsg && bestSpeed !== 0" class="alert alert-success" role="alert">
+        {{beastStationMsg}}
+    </div>
+    <div *ngIf="beastStationMsg && bestSpeed === 0" class="alert alert-danger" role="alert">
+        {{beastStationMsg}}
+    </div>
+</div>
