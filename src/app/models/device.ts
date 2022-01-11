@@ -1,4 +1,4 @@
 export interface Device {
-    x: number,
-    y: number,
+    x?: number,
+    y?: number,
 }

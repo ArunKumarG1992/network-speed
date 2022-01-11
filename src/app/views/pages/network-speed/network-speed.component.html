@@ -24,7 +24,7 @@
     <div class="mb-4">
         <!-- Device details -->
         <div class="mb-2">
-            <u><strong>Device location:</strong></u>
+            <u><strong>Please enter the Device location:</strong></u>
         </div>
         <table class="table table-striped">
             <thead>
@@ -41,7 +41,9 @@
             </tbody>
         </table>
     </div>
-    <button type="button" class="btn btn-primary mb-3" (click)="findBestNetworkStartion()">Find</button>
+    <!-- Enabled after device location is typed -->
+    <button [disabled]="!device.x || !device.y" type="button" class="btn btn-primary mb-3"
+        (click)="findBestNetworkStartion()">Find</button>
     <!-- Output best station with the best speed calculated -->
     <div *ngIf="beastStationMsg && bestSpeed !== 0" class="alert alert-success" role="alert">
         {{beastStationMsg}}
