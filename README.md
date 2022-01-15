@@ -22,9 +22,54 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Contribution
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+The branch `master` is renamed to `main`.  
+Don't push code directly into `main` or `develop` branches.
+
+### Git Workflow Init
+
+To initialize the git workflow, use the following command  
+`git flow init`
+
+### Branch naming conventions
+
+create branches under groups  
+like `group/task_name`
+
+Groups:
+
+- feature/ - Feature which are to be added
+- bugfix/ - Bug fixes
+- hotfix/ - Hotfix branches
+- release/ - Create release to merge with main branch
+- junk/ - Throwaway branch created to experiment
+
+eg: feature/addNetworkStation
+
+### Create new feature branch
+
+To create new feature branch, use the following command  
+`git flow feature start feature_branch_name`  
+To merge create PR for feature branch to merge it into `develop` branch
+
+### Create new bugfix branch
+
+To create new bugfix branch, use the following command  
+`git flow bugfix start bugfix_branch_name`  
+To merge create PR for bugfix branch to merge it into `develop` branch
+
+### Create new release branch
+
+To create new Release branch, use the following command  
+`git flow release start 0.1.0`  
+To merge create PR for release branch to merge it into `main` branch
+
+### Create new Hotfix branch
+
+To create new Hotfix branch, use the following command  
+`git flow hotfix start hotfix_branch_name`  
+To merge create PR for Hotfix branch to merge it into both `develop` and `main` branch
 
 ## Further help
 
