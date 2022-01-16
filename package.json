@@ -1,6 +1,6 @@
 {
   "name": "network-speed",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +8,8 @@
     "build-prod": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --code-coverage",
-    "test-prod": "ng test --code-coverage --configuration production"
+    "test-prod": "ng test --code-coverage --configuration production",
+    "deploy": "ng deploy --base-href=/network-speed/"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +34,7 @@
     "@angular/compiler-cli": "~13.1.0",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
+    "angular-cli-ghpages": "^1.0.0",
     "jasmine-core": "~3.10.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
